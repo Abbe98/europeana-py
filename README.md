@@ -4,7 +4,7 @@ This is a Python library to interact with various Europeana APIs. This library i
 
 ## Installation
 
-By design, the library is contained in a single file so you can just grab it and lean back. If that isn't your thing you can install it from pypi:
+By design, the library is contained in a single file so you can just grab it and lean back.
 
 ```bash
 pip install git+https://github.com/Abbe98/europeana-py.git
