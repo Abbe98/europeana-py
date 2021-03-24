@@ -51,7 +51,7 @@ class Europeana:
         r = requests.post(self.search_endpoint, headers=self.headers, json=data)
         return r.json()
 
-    def search(self, query='*', query_filters=[], profile='standard', sort=False):
+    def search(self, query='*', query_filters=[], profile='standard', sort=[]):
         has_more = True
         cursor = '*'
         while has_more:
