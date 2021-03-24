@@ -56,8 +56,11 @@ class Europeana:
         cursor = '*'
         while has_more:
             data = self._make_search(query=query, query_filters=query_filters, profile=profile, cursor=cursor, sort=sort)
-            for item in data['items']:
-                yield item
+            try:
+                for item in data['items']:
+                    yield item
+            except KeyError:
+                raise ValueError(data['error'])
 
             if 'nextCursor' in data:
                 cursor = data['nextCursor']
